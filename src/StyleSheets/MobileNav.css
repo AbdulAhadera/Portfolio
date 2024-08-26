@@ -1,0 +1,96 @@
+.nav {
+    position: relative;
+}
+
+.nav-container {
+    background-color: var(--primary-background);
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-container.open {
+    height: 500px;
+    width: 500px;
+    border-radius: 250px;
+    top: -250px;
+    right: -250px;
+}
+
+.bar {
+    color: var(--primary-text);
+    position: relative;
+    transition: opacity 0.5s ease;
+    top: 13px;
+    right: 15px;
+}
+
+.cross {
+    position: relative;
+    color: var(--primary-text);
+    top: 17px;
+    right: 17px;
+}
+
+.nav-container.animating .bar {
+    opacity: 0;
+}
+
+.icon-div-1 {
+    border: 2px solid var(--primary-text);
+    border-radius: 25px;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 255px;
+    right: 440px;
+    padding: 10px;
+    transition: all 1s ease;
+}
+
+
+.icon-div-2 {
+    border: 2px solid var(--primary-text);
+    border-radius: 25px;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 335px;
+    right: 410px;
+    padding: 10px;
+}
+
+.icon-div-3 {
+    border: 2px solid var(--primary-text);
+    border-radius: 25px;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 400px;
+    right: 345px;
+    padding: 12px;
+}
+
+.icon-div-4 {
+    border: 2px solid var(--primary-text);
+    border-radius: 25px;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 435px;
+    right: 265px;
+    padding: 11px;
+    padding-top: 12px;
+}
+.icon{
+    color: var(--accent-color-1);
+}
