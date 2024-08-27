@@ -55,11 +55,26 @@
 
 /* Satisfying Theme */
 
+/* :root {
+    --primary-background: #e8f5e9;
+    --primary-text: #37474f; 
+    --accent-color-1: #81c784;
+    --accent-color-2: #4db6ac; 
+    --secondary-background: #ffffff; 
+    --secondary-text: #78909c; 
+} */
+
+/* Shades of blue Satisfying */
+
 :root {
-    --primary-background: #e8f5e9; /* Soft Green */
-    --primary-text: #37474f; /* Slate Gray */
-    --accent-color-1: #81c784; /* Light Green */
-    --accent-color-2: #4db6ac; /* Soft Teal */
-    --secondary-background: #ffffff; /* White */
-    --secondary-text: #78909c; /* Light Slate Gray */
+    --primary-background: #1b1b1b; /* Very Dark Gray for the main background */
+    --primary-text: #f0f0f0; /* Light Gray for readable text against the dark background */
+    --accent-color-1: #53b6f8; /* Cool Blue for links and buttons */
+    --accent-color-2: #e74c3c; /* Vibrant Red for call-to-action elements */
+    --secondary-background: #2c2c2c; /* Darker Gray for content sections */
+    --secondary-text: #b0b0b0; /* Medium Gray for secondary text */
+    --border-color: #444444; /* Dark Gray for borders */
+    --hover-color: #2980b9; /* Slightly brighter blue for hover effects */
 }
+
+ 

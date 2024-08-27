@@ -1,7 +1,9 @@
 import AnimatedCursor from "react-animated-cursor";
 import MobileNavbar from "./components/MobileNavbar";
 import Hero from "./components/Hero";
+import LaptopNavbar from "./components/LaptopNavbar";
 import './App.css';
+import About from "./components/About";
 
 
 function App() {
@@ -9,7 +11,14 @@ function App() {
 
   return (
     <div className="App">
-      <MobileNavbar />
+
+      <div className="mobile-nav">
+        <MobileNavbar />
+      </div>
+      <div className="laptop-nav">
+        <LaptopNavbar />
+      </div>
+
       <AnimatedCursor
         innerSize={10}
         outerSize={12}
@@ -32,6 +41,7 @@ function App() {
         ]}
       />
       <Hero />
+      <About />
     </div>
   );
 }

@@ -1,0 +1,170 @@
+.laptop-nav {
+    height: 60px;
+    width: 100%;
+    background-color:var(--primary-background);
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-text {
+    font-weight: bold;
+    color: rgba(38, 199, 255, 1);
+    font-size: 32px;
+    padding-top: 5px;
+}
+
+.nav-content-1 {
+    padding-top: 10px;
+    /* width: fit-content; */
+}
+
+.nav-content-2 {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    color: var(--primary-text);
+    width: 55%;
+    padding-top: 10px;
+}
+
+.nav-elem {
+    padding-top: 5px;
+    position: relative;
+    font-size: 18px;
+    height: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--primary-text);
+    cursor: pointer;
+    padding-bottom: 10px;
+}
+
+.nav-elem::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -12px;
+    height: 3px;
+    background: rgb(52, 152, 219);
+    background: linear-gradient(270deg, rgba(52, 152, 219, 1) 1%, rgba(38, 199, 255, 1) 100%);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 1s ease;
+}
+
+.nav-elem:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.button-78 {
+    align-items: center;
+    appearance: none;
+    background-clip: padding-box;
+    background-color: transparent;
+    /* Transparent to show the gradient */
+    background-image: none;
+    border-style: none;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    /* Changed to inline-flex for proper alignment */
+    flex-direction: row;
+    flex-shrink: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Updated font */
+    font-size: 18px;
+    font-weight: bold;
+    justify-content: center;
+    line-height: 24px;
+    margin: 0;
+    min-height: 30px;
+    /* Set the height to 30px as per your requirements */
+    outline: none;
+    padding: 5px 25px;
+    /* Updated padding as per your requirements */
+    pointer-events: auto;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    width: auto;
+    word-break: keep-all;
+    z-index: 0;
+    border-radius: 15px;
+    /* Rounded corners */
+}
+
+.button-78:before,
+.button-78:after {
+    border-radius: 15px;
+    /* Match border-radius with button */
+}
+
+.button-78:before {
+    background-image: linear-gradient(270deg, rgba(52, 152, 219, 1) 1%, rgba(38, 199, 255, 1) 100%);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -2;
+}
+
+.button-78:after {
+    background-color: initial;
+    background-color: var(--primary-background);
+    content: "";
+    display: block;
+    top: 3px;
+    left: 3px;
+    bottom: 3px;
+    right: 3px;
+    overflow: hidden;
+    position: absolute;
+    transition: all 100ms ease-out;
+    z-index: -1;
+}
+
+.button-78:hover:not(:disabled):before {
+    background: linear-gradient(270deg, rgba(38, 199, 255, 1) 0%, rgba(52, 152, 219, 1) 100%);
+    /* Reverse the hover gradient */
+}
+
+.button-78:hover:not(:disabled):after {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    transition-timing-function: ease-in;
+    opacity: 0;
+}
+
+.button-78:active:not(:disabled) {
+    color: #ccc;
+}
+
+.button-78:active:not(:disabled):before {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(270deg, rgba(52, 152, 219, 1) 1%, rgba(38, 199, 255, 1) 100%);
+}
+
+.button-78:active:not(:disabled):after {
+    background-image: linear-gradient(#3498db 0%, #2980b9 100%);
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
+    top: 4px;
+}
+
+.button-78:disabled {
+    cursor: default;
+    opacity: .24;
+}
