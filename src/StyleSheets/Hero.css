@@ -11,8 +11,8 @@
 }
 
 .sec-1 {
-    width: 50%;
-    height: 80vh;
+    width: 60%;
+    /* height: 80vh; */
 }
 
 .heading {
@@ -67,6 +67,40 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .sec-2{
-    width: 50%;
-    background-color: aqua;
+    width: 40%;
+}
+@media only screen and (max-width:768px) {
+        .sec-1{
+            width: 100%;
+        }
+}
+@media only screen and (max-width:425px) {
+        .container{
+            display: grid;
+        }
+        .sec-2{
+            width: 100%;
+            background-color: aqua;
+            height: 100px;
+        }
+        .sec-1{
+            width: 100%;
+        }
+        .heading{
+            font-size: 36px;
+        }
+        .hand-gif{
+            height: 64px;
+        }
+        .hi{
+            display: block;
+            padding: 0%;
+        }
+        .hero-col-2{
+            font-size: 18px;
+        }
+        .hero-col-3{
+            font-size: 16px;
+            line-height: 18px;
+        }
 }

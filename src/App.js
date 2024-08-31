@@ -40,8 +40,10 @@ function App() {
           '.link'
         ]}
       />
-      <Hero />
-      <About />
+      <div className="body">
+        <Hero />
+        <About />
+      </div>
     </div>
   );
 }

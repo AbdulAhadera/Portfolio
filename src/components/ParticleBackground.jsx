@@ -15,7 +15,7 @@ const ParticlesBackground = () => {
     }, []);
 
     const particlesLoaded = (container) => {
-        console.log("Particles Loaded:", container);
+        // console.log("Particles Loaded:", container);
     };
 
     return (

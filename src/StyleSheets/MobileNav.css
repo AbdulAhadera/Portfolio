@@ -4,42 +4,39 @@
 
 .nav-container {
     background-color: var(--secondary-background);
-    height: 80px;
-    width: 80px;
-    border-radius: 40px;
+    height: 50px;
+    width: 50px;
+    border-radius: 99% 1% 0% 100% / 0% 0% 100% 100% ;
     position: absolute;
-    top: -40px;
-    right: -40px;
+    right: 0px;
     overflow: hidden;
     transition: all 1s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-left: 18px;
+    padding-top: 5px;
 }
 
 .nav-container.open {
-    height: 500px;
-    width: 500px;
-    border-radius: 250px;
-    top: -250px;
-    right: -250px;
+    right: 0;
+    height: 250px;
+    width: 250px;
+    border-radius: 99% 1% 0% 100% / 0% 0% 100% 100%;
 }
 
 .bar {
     color: var(--primary-text);
     position: relative;
     transition: opacity 0.5s ease;
-    top: 13px;
-    right: 15px;
+    top: 1px;
+    right: 1px;
 }
 
 .cross {
     position: relative;
     color: var(--primary-text);
-    top: 17px;
-    right: 17px;
+    top: 5px;
+    right: -85%;
     cursor: pointer;
-   
+
 }
 
 .nav-container.animating .bar {
@@ -51,28 +48,27 @@
     border-radius: 25px;
     height: 50px;
     width: 50px;
+    top: 8px;
+    right: 180px;
     position: absolute;
-    top: 255px;
-    right: 440px;
     padding: 9px;
     transition: all .5s ease;
     cursor: pointer;
 }
 
-
 .icon-div-2 {
-    
+
     border: 3px solid var(--border-color);
     border-radius: 25px;
     height: 50px;
     width: 50px;
     position: absolute;
-    top: 335px;
-    right: 410px;
+    top: 90px;
+    right: 150px;
     padding: 10px;
     transition: all .5s ease;
     cursor: pointer;
-   
+
 }
 
 .icon-div-3 {
@@ -81,12 +77,12 @@
     height: 50px;
     width: 50px;
     position: absolute;
-    top: 400px;
-    right: 345px;
+    top: 155px;
+    right: 90px;
     padding: 11.5px;
     transition: all .5s ease;
     cursor: pointer;
-   
+
 }
 
 .icon-div-4 {
@@ -95,23 +91,31 @@
     height: 50px;
     width: 50px;
     position: absolute;
-    top: 435px;
-    right: 265px;
+    top: 185px;
+    right: 10px;
     padding: 10px;
     padding-top: 11px;
     transition: all .5s ease;
     cursor: pointer;
-   
+
 }
-.icon{
+
+.icon {
     color: var(--primary-text);
 }
-.icon-div-1:hover{
+
+.icon-div-1:hover {
     background-color: var(--hover-color);
-}.icon-div-2:hover{
+}
+
+.icon-div-2:hover {
     background-color: var(--hover-color);
-}.icon-div-3:hover{
+}
+
+.icon-div-3:hover {
     background-color: var(--hover-color);
-}.icon-div-4:hover{
+}
+
+.icon-div-4:hover {
     background-color: var(--hover-color);
 }

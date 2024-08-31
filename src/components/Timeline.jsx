@@ -1,38 +1,45 @@
 import React, { useEffect } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import '../StyleSheets/Timeline.css';
+import anime from 'animejs';
+import '../StyleSheets/Timeline.css'; // Make sure you have the necessary styles
 
-gsap.registerPlugin(ScrollTrigger);
-
-const Timeline = () => {
+const ScrollAnimation = () => {
   useEffect(() => {
-    const timeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".timeline-container",
-        start: "top top",   // Start when the top of the container hits the top of the viewport
-        end: "bottom bottom", // End when the bottom of the container hits the bottom of the viewport
-        scrub: true,        // Smoothly animate in sync with the scroll position
-        pin: true,          // Pin the container in place during scroll
-        markers: false,     // Set to true to see markers for debugging
-      }
+    // Initialize the animation but don't autoplay
+    const scrollAnimation = anime({
+      targets: '.box',
+      translateX: 180,
+      duration: 5000, // 2000ms (2 seconds) duration
+      easing: 'easeInOutQuad',
+      autoplay: false // Disable autoplay
     });
 
-    // Define keyframes for the ball's movement
-    timeline
-      .to(".ball", { x: '10vw' }, 0)        // Move to 10% of the viewport width
-      .to(".ball", { x: '35vw' }, 0.25)     // Move to 35% of the viewport width
-      .to(".ball", { x: '65vw' }, 0.65)     // Move to 65% of the viewport width
-      .to(".ball", { x: '90vw' }, 1);       // Move to 90% of the viewport width
+    // Add a scroll event listener
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const viewportHeight = window.innerHeight;
+      const totalScrollableHeight = document.body.scrollHeight - viewportHeight;
 
-  }, []); // Empty dependency array to run this effect only once when the component mounts
+      // Calculate the scroll percentage (0 to 1)
+      const scrollPercentage = scrollPosition / totalScrollableHeight;
+
+      // Seek the animation based on the scroll position
+      scrollAnimation.seek(scrollPercentage * scrollAnimation.duration);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []); // Empty dependency array to ensure this runs only once when the component mounts
+
 
   return (
-    <div className="timeline-container">
-      <div className="timeline"></div>
-      <div className="ball"></div>
+    <div className="scroll-container">
+      <div className="box">Scroll Me</div>
     </div>
   );
 };
 
-export default Timeline;
+export default ScrollAnimation;
