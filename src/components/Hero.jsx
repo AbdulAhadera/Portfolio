@@ -2,6 +2,7 @@ import React from 'react';
 import '../StyleSheets/Hero.css';
 import ParticlesBackground from './ParticleBackground';
 import hand from '../Materials/hand-unscreen.gif';
+import pic from '../Materials/pp.png'
 import Typewriter from 'typewriter-effect';
 
 
@@ -36,8 +37,13 @@ function Hero() {
           </div>
 
         </div>
-        <div className='sec-2'>asdas</div>
-      
+        <div className="sec-2">
+          <div className="img-div">
+            img lagani hai 
+          </div>
+        </div>
+
+
       </div>
     </div>
   )
